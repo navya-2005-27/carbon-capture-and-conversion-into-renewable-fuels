@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Club - Carbon Capture Revolution</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Eco Club</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Parallax Effect -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Save Our Planet</h1>
+            <p>Together, we transform carbon emissions into clean, renewable energy.</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Main Sections -->
+    <main>
+        <!-- About Carbon Section -->
+        <section id="about" class="section about">
+            <h2>About Carbon</h2>
+            <p>Understanding carbon's role is key to protecting our environment. From the carbon cycle to its effects on climate change, learn how we can turn emissions into opportunity.</p>
+            <img src="cycle.jpg" alt="Carbon Cycle Diagram">
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="section how-it-works">
+            <h2>How Carbon Capture Works</h2>
+            <p>Discover the process of capturing carbon and converting it into sustainable energy.</p>
+            <div class="steps">
+                <div class="step">
+                    <img src="carbon.jpg" alt="Step 1 Image">
+                    <h3>Capture</h3>
+                    <p>Trapping CO₂ directly from the atmosphere.</p>
+                </div>
+                <div class="step">
+                    <img src="storage.jpg" alt="Step 2 Image">
+                    <h3>Storage</h3>
+                    <p>Safely storing carbon in underground reservoirs.</p>
+                </div>
+                <div class="step">
+                    <img src="conversion.jpg" alt="Step 3 Image">
+                    <h3>Conversion</h3>
+                    <p>Converting CO₂ into biofuels and clean energy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <h2>Our Projects</h2>
+            <p>Explore our initiatives across the globe, transforming carbon and empowering communities.</p>
+            <div class="project-gallery">
+                <img src="project1.jpg" alt="Project 1">
+                <img src="project2.jpg" alt="Project 2">
+                
+            </div>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section id="get-involved" class="section get-involved">
+            <h2>Get Involved</h2>
+            <p>Join our efforts to make a sustainable future a reality. Become a member or volunteer today!</p>
+            <a href="#membership" class="cta-button">Become a Member</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Eco Club - All rights reserved.</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#projects">Projects</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </footer>
+</body>
+</html>
+<style>
+    /* Basic Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #28a745;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 15px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section with Parallax Effect */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero .cta-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .cta-button:hover {
+    background-color: #218838;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 60px 20px;
+    background-color: #e9f7ec;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.step h3 {
+    color: #28a745;
+    margin-top: 10px;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.project-gallery img {
+    width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Parallax Scrolling Effect
+    window.addEventListener('scroll', () => {
+        const hero = document.querySelector('.hero');
+        let offset = window.pageYOffset;
+        hero.style.backgroundPositionY = `${offset * 0.5}px`;
+    });
+});
+
+</script>
