@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCarbon Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#dac">Direct Air Capture</a></li>
+                <li><a href="#energy">Renewable Energy Assessment</a></li>
+                <li><a href="#biochar">Biochar Production</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dac">
+            <h2>Direct Air Capture Simulation</h2>
+            <div class="output" id="dac-output">Capture rate: <span id="dac-rate">0</span> kg CO₂/h</div>
+            <button onclick="simulateDAC()">Start Simulation</button>
+        </section>
+
+        <section id="energy">
+            <h2>Renewable Energy Assessment</h2>
+            <button onclick="assessEnergy()">Run Assessment</button>
+            <div class="output" id="energy-output"></div>
+        </section>
+
+        <section id="biochar">
+            <h2>Biochar Production Module</h2>
+            <button onclick="calculateBiochar()">Calculate Storage</button>
+            <div class="output" id="biochar-output"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OpenCarbon Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #0077aa;
+}
+
+button {
+    background-color: #0077aa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #005f8a;
+}
+
+.output {
+    background-color: #e8f4fa;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+</style>
+<script>
+  // Direct Air Capture Simulation
+function simulateDAC() {
+  const rate = Math.random() * 100;  // Random rate in kg CO₂/h
+  document.getElementById("dac-rate").textContent = rate.toFixed(2);
+}
+
+// Renewable Energy Assessment
+function assessEnergy() {
+  document.getElementById("energy-output").textContent = "Assessing renewable sources...";
+  setTimeout(() => {
+      const windPower = Math.random() * 200;  // Wind power in MW
+      const solarPower = Math.random() * 150;  // Solar power in MW
+      document.getElementById("energy-output").textContent = 
+          `Wind Power: ${windPower.toFixed(1)} MW, Solar Power: ${solarPower.toFixed(1)} MW`;
+  }, 1000);
+}
+
+// Biochar Production Calculation
+function calculateBiochar() {
+  document.getElementById("biochar-output").textContent = "Calculating storage potential...";
+  setTimeout(() => {
+      const biocharStorage = Math.random() * 1000;  // Storage in kg CO₂
+      document.getElementById("biochar-output").textContent = 
+          `Biochar Storage Capacity: ${biocharStorage.toFixed(0)} kg CO₂`;
+  }, 1000);
+}
+
+</script>
