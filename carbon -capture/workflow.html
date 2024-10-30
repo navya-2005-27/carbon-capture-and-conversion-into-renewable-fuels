@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Capture and Storage Workflow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#about">About CCS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Carbon Capture and Storage Workflow</h1>
+        <p>Explore the steps involved in carbon capture and storage through a dynamic simulation.</p>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow">
+        <h2>Carbon Capture and Storage Workflow</h2>
+        <div class="progress-bar">
+            <div id="progress" style="width: 0%;"></div>
+        </div>
+
+        <div class="workflow">
+            <button onclick="runReservoirSimulation()">Run Reservoir Simulation</button>
+            <div id="reservoir-output" class="output"></div>
+            
+            <button onclick="runRockPhysicsModeling()">Run Rock Physics Modeling</button>
+            <div id="rock-output" class="output"></div>
+            
+            <button onclick="runSeismicModeling()">Run Seismic Modeling</button>
+            <div id="seismic-output" class="output"></div>
+            
+            <button onclick="runGeomechanicsAnalysis()">Run Geomechanics Analysis</button>
+            <div id="geomechanics-output" class="output"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Carbon Capture and Storage</h2>
+        <p>Carbon capture and storage (CCS) is a process that captures carbon dioxide emissions from sources like power plants...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Carbon Capture Project | Powered by Simulation</p>
+    </footer>
+
+    <script>
+        let progressPercentage = 0;
+
+        function updateProgress() {
+            progressPercentage += 25;
+            document.getElementById("progress").style.width = `${progressPercentage}%`;
+        }
+
+        // Simulate Reservoir Simulation
+        function runReservoirSimulation() {
+            document.getElementById("reservoir-output").textContent = "Running Reservoir Simulation...";
+            updateProgress();
+            
+            setTimeout(() => {
+                const fluidFlow = Math.random() * 100;  // Simulated result
+                document.getElementById("reservoir-output").textContent = `Reservoir Simulation Complete: Fluid Flow = ${fluidFlow.toFixed(2)}`;
+            }, 1000);
+        }
+
+        // Simulate Rock Physics Modeling
+        function runRockPhysicsModeling() {
+            document.getElementById("rock-output").textContent = "Running Rock Physics Modeling...";
+            updateProgress();
+            
+            setTimeout(() => {
+                const bulkModulus = Math.random() * 2000;  // Simulated result
+                document.getElementById("rock-output").textContent = `Rock Physics Modeling Complete: Bulk Modulus = ${bulkModulus.toFixed(2)}`;
+            }, 1000);
+        }
+
+        // Simulate Seismic Modeling
+        function runSeismicModeling() {
+            document.getElementById("seismic-output").textContent = "Running Seismic Modeling...";
+            updateProgress();
+            
+            setTimeout(() => {
+                const wavelength = Math.random() * 50;  // Simulated result
+                document.getElementById("seismic-output").textContent = `Seismic Modeling Complete: Wavelength = ${wavelength.toFixed(2)}`;
+            }, 1000);
+        }
+
+        // Simulate Geomechanics Analysis
+        function runGeomechanicsAnalysis() {
+            document.getElementById("geomechanics-output").textContent = "Running Geomechanics Analysis...";
+            updateProgress();
+            
+            setTimeout(() => {
+                const totalStrain = Math.random();  // Simulated result
+                document.getElementById("geomechanics-output").textContent = `Geomechanics Analysis Complete: Total Strain = ${totalStrain.toFixed(2)}`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Main Sections */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Workflow Buttons */
+.workflow {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Output Boxes */
+.output {
+    background-color: #e1e8ed;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 5px;
+    min-height: 20px;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    height: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#progress {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Animation for Sections */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
