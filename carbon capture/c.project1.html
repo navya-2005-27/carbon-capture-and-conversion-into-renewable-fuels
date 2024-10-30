@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #00796b;
+        }
+        
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        h2 {
+            color: #007bff;
+        }
+        
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+        
+        .info {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Project 1</h1>
+
+<div class="section" id="technicalMethod">
+    <h2>Technical Method</h2>
+    <button class="button" onclick="toggleInfo('technicalInfo')">Show Technical Methods</button>
+    <div class="info" id="technicalInfo">
+        <h3>Direct Air Capture (DAC)</h3>
+        <p><strong>Description:</strong> Technologies that capture CO₂ directly from the atmosphere using chemical processes.</p>
+        <p><strong>Application:</strong> Captured CO₂ can be converted into fuels via processes like electrochemical reduction or chemical conversion.</p>
+
+        <h3>Carbon Capture and Storage (CCS)</h3>
+        <p><strong>Description:</strong> Capturing CO₂ emissions from industrial processes and storing it underground.</p>
+        <p><strong>Application:</strong> Captured CO₂ can also be utilized in the production of synthetic fuels.</p>
+
+        <h3>Electrochemical Reduction</h3>
+        <p><strong>Description:</strong> Using electricity (often from renewable sources) to convert CO₂ into hydrocarbons or alcohols.</p>
+        <p><strong>Application:</strong> Produces fuels like methanol or synthetic gasoline.</p>
+
+        <h3>Thermochemical Processes</h3>
+        <p><strong>Description:</strong> High-temperature processes that convert CO₂ and water into syngas (a mixture of hydrogen and carbon monoxide).</p>
+        <p><strong>Application:</strong> Syngas can be further processed into liquid fuels (Fischer-Tropsch synthesis).</p>
+
+        <h3>Gasification</h3>
+        <p><strong>Description:</strong> Converting carbon-rich materials (like biomass or coal) into syngas through high-temperature reactions with limited oxygen.</p>
+        <p><strong>Application:</strong> Syngas can be converted into various fuels using catalytic processes.</p>
+
+        <h3>Biomass Conversion</h3>
+        <p><strong>Description:</strong> Various technologies (such as pyrolysis or gasification) convert biomass into fuels, capturing CO₂ during biomass growth.</p>
+        <p><strong>Application:</strong> Produces biofuels, which can partially offset fossil fuel use.</p>
+
+        <h3>Catalytic Conversion</h3>
+        <p><strong>Description:</strong> Using catalysts to enhance chemical reactions that convert CO₂ into hydrocarbons or alcohols.</p>
+        <p><strong>Application:</strong> Produces synthetic fuels or chemicals from captured CO₂.</p>
+
+        <h3>Methanation</h3>
+        <p><strong>Description:</strong> The process of reacting hydrogen (produced from electrolysis) with CO₂ to produce methane.</p>
+        <p><strong>Application:</strong> Methane can be used as a fuel or injected into natural gas grids.</p>
+
+        <h3>Solar Fuel Generation</h3>
+        <p><strong>Description:</strong> Using solar energy to drive photochemical reactions that convert CO₂ and water into fuels.</p>
+        <p><strong>Application:</strong> Produces hydrocarbons or alcohols through solar-driven processes.</p>
+
+        <h3>Cryogenic Carbon Capture</h3>
+        <p><strong>Description:</strong> Using low temperatures to capture CO₂ from the atmosphere or industrial emissions.</p>
+        <p><strong>Application:</strong> Captured CO₂ can be converted into fuels through various chemical processes.</p>
+    </div>
+</div>
+
+<div class="section" id="naturalMethod">
+    <h2>Natural Method</h2>
+    <button class="button" onclick="toggleInfo('naturalInfo')">Show Natural Methods</button>
+    <div class="info" id="naturalInfo">
+        <h3>Photosynthesis</h3>
+        <p>Plants absorb CO₂ from the atmosphere through tiny pores called stomata. In the presence of sunlight, plants convert CO₂ and water into glucose (C6H12O6) and oxygen (O₂) via photosynthesis.</p>
+
+        <h3>Consumption</h3>
+        <p>Animals eat plants and take in the carbon stored in plant tissues. This carbon becomes part of the animal's body through digestion and assimilation.</p>
+
+        <h3>Decomposition</h3>
+        <p>When plants and animals die, decomposers (bacteria, fungi) break down their organic matter. This process releases CO₂ back into the atmosphere and also enriches the soil with organic matter.</p>
+
+        <h3>Fossilization</h3>
+        <p>Some carbon in dead plants and animals doesn't decompose completely and gets buried under layers of sediment. Over millions of years, heat and pressure transform this carbon into fossil fuels like coal, oil, and natural gas.</p>
+
+        <h3>Oceanic Sequestration</h3>
+        <p>Phytoplankton in oceans absorb CO₂ during photosynthesis. When phytoplankton die, they sink to the ocean floor, trapping carbon in deep ocean sediments.</p>
+
+        <h3>Soil Carbon Sequestration</h3>
+        <p>Plants sequester carbon in their roots and the surrounding soil. This carbon can remain in the soil for long periods, especially if the soil is undisturbed.</p>
+
+        <h3>Rock Weathering</h3>
+        <p>When volcanic rocks weather, they react with CO₂ in the atmosphere, forming solid carbonate minerals. This process removes CO₂ from the atmosphere and traps it in rocks.</p>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(infoId) {
+        const info = document.getElementById(infoId);
+        info.style.display = info.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>

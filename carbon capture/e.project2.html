@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Online and Offline Hubs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #5d5c61;
+        }
+        h2 {
+            color: #379683;
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .info {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e4f0e2;
+            border-left: 4px solid #379683;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            color: #fff;
+            background-color: #379683;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Project 2: </h1>
+
+    <!-- Online Hub Section -->
+    <h2>1. Online Hub</h2>
+    <button class="button" onclick="toggleInfo('onlineInfo')">Show Online Hub Information</button>
+    <div id="onlineInfo" class="info">
+        <div class="subtitle">Resource Library</div>
+        <ul>
+            <li><b>Research Papers:</b> Access to academic research on carbon capture, storage, and conversion.</li>
+            <li><b>White Papers & Technical Reports:</b> Reports from industry leaders and agencies.</li>
+            <li><b>Guides and Tutorials:</b> Step-by-step guides on technologies like DAC, CCS, etc.</li>
+            <li><b>Equipment Database:</b> Catalog of materials and devices for carbon processes.</li>
+        </ul>
+        <div class="subtitle">Knowledge Sharing and Collaboration Tools</div>
+        <ul>
+            <li><b>Discussion Forums and Chat Groups:</b> Topic-specific forums for collaboration.</li>
+            <li><b>Webinars and Workshops:</b> Sessions led by experts on new technologies.</li>
+            <li><b>Collaborative Projects:</b> Post project ideas and join real-world applications.</li>
+        </ul>
+        <div class="subtitle">Simulation and Modeling Tools</div>
+        <ul>
+            <li><b>Carbon Capture Simulation:</b> Tools for simulating different capture technologies.</li>
+            <li><b>Chemical Reaction Models:</b> Models showing carbon conversion into fuels.</li>
+            <li><b>Economic Feasibility Calculators:</b> Cost models for evaluating technology viability.</li>
+        </ul>
+        <div class="subtitle">Innovation and Funding Portal</div>
+        <ul>
+            <li><b>Funding Opportunities:</b> Listings for grants and government subsidies.</li>
+            <li><b>Open Innovation Challenges:</b> Competitions for proposing solutions.</li>
+            <li><b>Case Studies:</b> Success stories in carbon-to-fuel technology.</li>
+        </ul>
+        <div class="subtitle">Data and Standards Repository</div>
+        <ul>
+            <li><b>Data Sets:</b> Access to CO₂ concentration data and lifecycle assessments.</li>
+            <li><b>Technical Standards:</b> Guidelines for safety and quality control in conversion.</li>
+        </ul>
+        <div class="subtitle">Networking and Partnership Opportunities</div>
+        <ul>
+            <li><b>Directory of Experts:</b> Searchable directory of researchers and institutions.</li>
+            <li><b>Mentorship Programs:</b> Pairing of new innovators with experienced mentors.</li>
+            <li><b>Job Board:</b> Listings for jobs and internships in relevant fields.</li>
+        </ul>
+        <div class="subtitle">Carbon Calculator for Conversion Impact</div>
+        <ul>
+            <li><b>Emissions Reduction Calculator:</b> Tool for estimating emissions reduction.</li>
+            <li><b>Project Viability Dashboard:</b> Calculates CO₂ reduction potential and fuel production.</li>
+        </ul>
+    </div>
+
+    <!-- Offline Hub Section -->
+    <h2>2. Offline Hub</h2>
+    <button class="button" onclick="toggleInfo('offlineInfo')">Show Offline Hub Information</button>
+    <div id="offlineInfo" class="info">
+        <div class="subtitle">Resource Library</div>
+        <ul>
+            <li><b>Research Papers:</b> Access to academic research on carbon capture and conversion.</li>
+            <li><b>White Papers & Technical Reports:</b> Reports from industry and government.</li>
+            <li><b>Guides and Tutorials:</b> Step-by-step guides on DAC, CCS, and other technologies.</li>
+            <li><b>Equipment Database:</b> Catalog of materials and devices for carbon processes.</li>
+        </ul>
+        <div class="subtitle">Knowledge Sharing and Collaboration Tools</div>
+        <ul>
+            <li><b>Discussion Forums and Chat Groups:</b> Topic-specific forums for collaboration.</li>
+            <li><b>Webinars and Workshops:</b> Sessions led by experts.</li>
+            <li><b>Collaborative Projects:</b> Real-world project opportunities.</li>
+        </ul>
+        <div class="subtitle">Simulation and Modeling Tools</div>
+        <ul>
+            <li><b>Carbon Capture Simulation:</b> Tools for simulating different technologies.</li>
+            <li><b>Chemical Reaction Models:</b> Digital models for carbon conversion.</li>
+            <li><b>Economic Feasibility Calculators:</b> Cost models for viability assessment.</li>
+        </ul>
+        <div class="subtitle">Innovation and Funding Portal</div>
+        <ul>
+            <li><b>Funding Opportunities:</b> Grants and subsidies listings.</li>
+            <li><b>Open Innovation Challenges:</b> Competitions for proposing solutions.</li>
+            <li><b>Case Studies:</b> Success stories in carbon-to-fuel technology.</li>
+        </ul>
+        <div class="subtitle">Data and Standards Repository</div>
+        <ul>
+            <li><b>Data Sets:</b> CO₂ data and energy cost trends.</li>
+            <li><b>Technical Standards:</b> Safety and quality guidelines.</li>
+        </ul>
+        <div class="subtitle">Networking and Partnership Opportunities</div>
+        <ul>
+            <li><b>Directory of Experts:</b> Searchable directory of researchers and companies.</li>
+            <li><b>Mentorship Programs:</b> Pairing of new innovators with experienced mentors.</li>
+            <li><b>Job Board:</b> Listings for relevant positions.</li>
+        </ul>
+        <div class="subtitle">Carbon Calculator for Conversion Impact</div>
+        <ul>
+            <li><b>Emissions Reduction Calculator:</b> Tool for estimating emissions reduction.</li>
+            <li><b>Project Viability Dashboard:</b> Calculates CO₂ reduction potential and fuel production.</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function toggleInfo(id) {
+        var info = document.getElementById(id);
+        info.style.display = info.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
